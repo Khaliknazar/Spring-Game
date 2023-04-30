@@ -25,7 +25,7 @@ public class ObstacleController : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(waitSeconds1, waitSeconds2));
-            Instantiate(obstaclePrefabs[Random.Range(0, 2)], spawnPosition, Quaternion.identity);
+            Instantiate(obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)], spawnPosition, Quaternion.identity);
         }
     }
 }
