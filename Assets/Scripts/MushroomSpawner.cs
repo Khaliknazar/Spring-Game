@@ -19,7 +19,7 @@ public class MushroomSpawner : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isReady && Check())
+        if (Input.GetMouseButtonDown(0) && isReady)
         {
             MushroomSpawn();
         }
@@ -36,12 +36,5 @@ public class MushroomSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(reloadTime);
         isReady = true;
-    }
-
-    bool Check()
-    {
-        Vector2 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Physics2D.Raycast(worldPos, Vector2.zero, 1f, groundLayer).collider) return false;
-        return true;
     }
 }
