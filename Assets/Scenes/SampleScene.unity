@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreController: {fileID: 1243854939}
-  Level2: 20
+  Level2: 500
 --- !u!4 &684638735
 Transform:
   m_ObjectHideFlags: 0
