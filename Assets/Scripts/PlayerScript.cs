@@ -21,6 +21,7 @@ public class PlayerScript : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Die"))
         {
+            MovingEnvironment.moveSpeed = 5f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
