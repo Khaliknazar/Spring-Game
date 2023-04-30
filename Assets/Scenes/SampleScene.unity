@@ -453,7 +453,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mushroomSound: {fileID: 8300000, guid: 69f569ab456d257418dd86ab01ee6299, type: 3}
   mushroom_prefabs:
-  - {fileID: 6015958016314275885, guid: 74eaca9dcf50a634a9e821317af195f8, type: 3}
+  - {fileID: 8124007164446357274, guid: 41b8f40e68332764a8a219b3f4dc87db, type: 3}
+  - {fileID: 351923724575697175, guid: 6d3a99c7079458946bd1d45e93249a5b, type: 3}
+  - {fileID: 7981700268977064476, guid: 7d084fa2e37035f4a854517c313974c4, type: 3}
+  - {fileID: 6977534623232284917, guid: 8b5ea4b21fae18343a4ec96c19eacc65, type: 3}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
