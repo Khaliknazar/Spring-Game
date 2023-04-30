@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class ObstacleController : MonoBehaviour
 {
+    [SerializeField] ScoreController scoreController;
     [SerializeField] GameObject[] obstaclePrefabs;
     [SerializeField] float waitSeconds1;
     [SerializeField] float waitSeconds2;
     [SerializeField] Vector2 spawnPosition;
+
+    bool isDone = false;
     Coroutine SpawningEasy;
     void Start()
     {
@@ -17,7 +20,12 @@ public class ObstacleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(scoreController.score > 250f && !isDone)
+        {
+            waitSeconds1 = 1.4f;
+            waitSeconds2 = 2.0f;
+            isDone = true;
+        }
     }
 
     IEnumerator ObstacleSpawning()

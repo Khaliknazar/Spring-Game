@@ -11,6 +11,5 @@ public class MovingEnvironment : MonoBehaviour
     {
         transform.Translate(Vector2.left * Time.deltaTime * moveSpeed);
         moveSpeed += Time.deltaTime / 60f;
-        Debug.Log(moveSpeed);
     }
 }
