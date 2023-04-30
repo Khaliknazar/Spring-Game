@@ -6,6 +6,8 @@ public class MushroomSpawner : MonoBehaviour
 {
     [SerializeField] GameObject mushroom_prefab;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] float reloadTime;
+    bool isReady = true;
     Vector2 mousePos()
     {
         Vector2 mousePoition = Input.mousePosition;
@@ -17,7 +19,7 @@ public class MushroomSpawner : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isReady)
         {
             MushroomSpawn();
         }
@@ -26,5 +28,13 @@ public class MushroomSpawner : MonoBehaviour
     void MushroomSpawn()
     {
         Instantiate(mushroom_prefab, mousePos(), Quaternion.identity);
+        isReady = false;
+        StartCoroutine(Realoading());
+    }
+
+    IEnumerator Realoading()
+    {
+        yield return new WaitForSeconds(reloadTime);
+        isReady = true;
     }
 }
