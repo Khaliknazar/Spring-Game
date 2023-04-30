@@ -6,18 +6,24 @@ using TMPro;
 public class ScoreController : MonoBehaviour
 {
     [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_Text recordText;
     [SerializeField] float scoreSpeed;
     float score;
+    float record;
 
     void Start()
     {
-        
+        record = PlayerPrefs.GetFloat("Record");
     }
 
-    // Update is called once per frame
     void Update()
     {
         scoreText.text = score.ToString("F0");
+        recordText.text = record.ToString("F0");
         score += Time.deltaTime * scoreSpeed;
+        if(score > record)
+        {
+            PlayerPrefs.SetFloat("Record", score);
+        }
     }
 }
