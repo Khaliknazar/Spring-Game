@@ -238,6 +238,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mushroom_prefab: {fileID: 8124007164446357274, guid: 41b8f40e68332764a8a219b3f4dc87db, type: 3}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!4 &396871180
 Transform:
   m_ObjectHideFlags: 0
@@ -266,7 +269,7 @@ GameObject:
   - component: {fileID: 689301637}
   - component: {fileID: 689301634}
   - component: {fileID: 689301638}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +408,7 @@ GameObject:
   - component: {fileID: 1061209401}
   - component: {fileID: 1061209400}
   - component: {fileID: 1061209399}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

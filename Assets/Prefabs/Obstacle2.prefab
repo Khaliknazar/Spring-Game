@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2173567291605866812}
   - component: {fileID: 2173567291605866811}
   - component: {fileID: 2173567291605866810}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Obstacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 2173567291994710401}
   - component: {fileID: 2173567291994710403}
   - component: {fileID: 2173567291994710402}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 2173567293166914698}
   - component: {fileID: 2173567293166914700}
   - component: {fileID: 2173567293166914699}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7135467163682377597}
   - component: {fileID: 5786931198503251819}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DeathPosition
   m_TagString: Die
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6846093408832029930}
   - component: {fileID: 5364222676787373582}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DeathPosition (1)
   m_TagString: Die
   m_Icon: {fileID: 0}

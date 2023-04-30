@@ -5,15 +5,16 @@ using UnityEngine;
 public class MushroomSpawner : MonoBehaviour
 {
     [SerializeField] GameObject mushroom_prefab;
+    [SerializeField] LayerMask groundLayer;
     Vector2 mousePos()
     {
         Vector2 mousePoition = Input.mousePosition;
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePoition);
 
-        RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.down);
+        RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.down, Mathf.Infinity, groundLayer);
         return new Vector2(hit.point.x, hit.point.y);
     }
-    
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
