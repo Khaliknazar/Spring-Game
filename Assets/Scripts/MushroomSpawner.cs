@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MushroomSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject mushroom_prefab;
+    [SerializeField] GameObject[] mushroom_prefabs;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float reloadTime;
     bool isReady = true;
@@ -27,7 +27,7 @@ public class MushroomSpawner : MonoBehaviour
 
     void MushroomSpawn()
     {
-        Instantiate(mushroom_prefab, mousePos(), Quaternion.identity);
+        Instantiate(mushroom_prefabs[Random.Range(0, mushroom_prefabs.Length)], mousePos(), Quaternion.identity);
         isReady = false;
         StartCoroutine(Realoading());
     }
