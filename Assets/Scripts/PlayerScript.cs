@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class PlayerScript : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Die"))
         {
-            Debug.Log("End");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
