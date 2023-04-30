@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class MovingEnvironment : MonoBehaviour
 {
-    [HideInInspector] public static float moveSpeed;
+    static float moveSpeed = 5f;
 
     private void Start()
     {
-        moveSpeed = 5f;
+        
     }
 
     void Update()
     {
         transform.Translate(Vector2.left * Time.deltaTime * moveSpeed);
+        moveSpeed += Time.deltaTime / 60f;
     }
 }

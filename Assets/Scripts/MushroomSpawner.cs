@@ -14,7 +14,7 @@ public class MushroomSpawner : MonoBehaviour
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePoition);
 
         RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.down, Mathf.Infinity, groundLayer);
-        return new Vector2(hit.point.x, hit.point.y);
+        return new Vector2(hit.point.x, hit.point.y + 0.2f);
     }
 
     void Update()

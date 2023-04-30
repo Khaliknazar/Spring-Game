@@ -17,7 +17,7 @@ public class GameSpeed : MonoBehaviour
     {
         if (scoreController.score > Level2)
         {
-            MovingEnvironment.moveSpeed = 6f;
+            //MovingEnvironment.moveSpeed = 6f;
         }
     }
 }
