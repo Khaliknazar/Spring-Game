@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class MushroomSpawner : MonoBehaviour
 {
+    [SerializeField] AudioClip mushroomSound;
     [SerializeField] GameObject[] mushroom_prefabs;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float reloadTime;
+    AudioSource audioSource;
     bool isReady = true;
+
     Vector2 mousePos()
     {
         Vector2 mousePoition = Input.mousePosition;
@@ -15,6 +18,11 @@ public class MushroomSpawner : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.down, Mathf.Infinity, groundLayer);
         return new Vector2(hit.point.x, hit.point.y + 0.2f);
+    }
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -28,6 +36,8 @@ public class MushroomSpawner : MonoBehaviour
     void MushroomSpawn()
     {
         Instantiate(mushroom_prefabs[Random.Range(0, mushroom_prefabs.Length)], mousePos(), Quaternion.identity);
+        audioSource.pitch = Random.Range(0.9f, 1.2f);
+        audioSource.PlayOneShot(mushroomSound);
         isReady = false;
         StartCoroutine(Realoading());
     }
