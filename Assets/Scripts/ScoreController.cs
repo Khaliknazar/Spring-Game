@@ -8,7 +8,7 @@ public class ScoreController : MonoBehaviour
     [SerializeField] TMP_Text scoreText;
     [SerializeField] TMP_Text recordText;
     [SerializeField] float scoreSpeed;
-    float score;
+    [HideInInspector] public float score;
     float record;
 
     void Start()
@@ -21,7 +21,7 @@ public class ScoreController : MonoBehaviour
         scoreText.text = score.ToString("F0");
         recordText.text = record.ToString("F0");
         score += Time.deltaTime * scoreSpeed;
-        if(score > record)
+        if (score > record)
         {
             PlayerPrefs.SetFloat("Record", score);
         }

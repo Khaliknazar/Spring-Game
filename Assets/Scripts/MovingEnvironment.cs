@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class MovingEnvironment : MonoBehaviour
 {
-    public static float moveSpeed = 5f;
+    [HideInInspector] public static float moveSpeed;
+
+    private void Start()
+    {
+        moveSpeed = 5f;
+    }
 
     void Update()
     {

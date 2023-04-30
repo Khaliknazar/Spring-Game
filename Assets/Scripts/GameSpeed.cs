@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class GameSpeed : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] ScoreController scoreController;
+    [SerializeField] float Level2;
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (scoreController.score > Level2)
+        {
+            MovingEnvironment.moveSpeed = 6f;
+        }
     }
 }
